@@ -1,0 +1,166 @@
+
+pks login -a https://pksnewapi.cfdev.canopy-cloud.com -u pksnewapiuser -p Syntel123$ --ca-cert pks.pem
+
+pks clusters
+
+pks get-credentials <CLUSTER-NAME> 
+
+#Add below to host file
+35.237.99.168	my-cluster.pksnew.cfdev.canopy-cloud.com
+
+6) Run kubectl commands on kubectl cli
+like 1) Kubectl get nodes 2) Kubectl get pods 
+
+
+
+Kubectl proxy
+
+http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login
+
+pks token
+eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImNsdXN0ZXItYWRtaW4tZGFzaGJvYXJkLXNhLXRva2VuLTZkZ3pqIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImNsdXN0ZXItYWRtaW4tZGFzaGJvYXJkLXNhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiYzU5NzBjMDgtZDYxNC0xMWU5LWE3ZjctNDIwMTBhMDAwYjBmIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6Y2x1c3Rlci1hZG1pbi1kYXNoYm9hcmQtc2EifQ.Wz_5HSMYGWvc80dkLnzlJck12g1Z3DJ0j0mQzt95nYO28-ldL-mIiSBOXRKu3hjrX4qODxdTs5BiugAVzjV4tDcSLlCivhmMn-e0A9IIaJLFTuuD4uOgN2fn8V1VDifVv9KjqgV25Ad9XGU46y0mqF6VC3qiIPms4drjKPj1LiTvtQM0u7qTIdrXUsrA67HF9Llil3nPKrEAReGv6iYN6loJfu237Y4-L8pJoug-OTzD5YlB2LLBpEpG9-gUpLjXeP_FI6tiQL_Ym0V-6fO7R8yYXPivyoAHnsqtnYlAVVHaLgLaAKY5ewQdWsuz3G_FK7tRcIUi8foaA9T8l_SfNA
+
+
+https://jenkins-x.io/getting-started/install/
+
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+choco install jenkins-x
+
+ from 'https://github.com/jenkins-x/jx/releases/download/v2.0.759/jx-windows-amd64.zip'
+ 
+ 
+jx install
+kubectl delete namespaces jx
+
+
+IP
+192.168.178.102
+username: giri/ user1
+
+
+curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.27/jx-linux-amd64.tar.gz | tar xzv sudo mv jx /usr/local/bin
+
+github
+
+giripks
+DhanasekharReddy_Podigiri@syntelinc.com
+9
+
+
+helm repo remove jenkins-x
+helm repo add jenkins-x	http://chartmuseum.jenkins-x.io
+
+kubectl delete secrets jx-install-config
+
+
+
+
+api github token
+d06afc83db9c652031b2151215d7776d0072d539
+
+
+
+https://github.com/jenkins-x/jx/issues/3897
+cd ~/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes
+git pull origin master
+git fetch origin master
+git branch --set-upstream-to=origin/master master
+
+unistall jx
+
+kubectl delete namespaces jx
+jx uninstall
+/usr/local/bin sudo rm jx
+cd ~
+rm -rf .jx
+
+
+[giri@centos7-demo .jx]$ grep -rle https://chartmuseum.build.cd.jenkins-x.io *
+draft/packs/github.com/jenkins-x/draft-packs/packs/appserver/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/go/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/gradle/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/javascript/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/liberty/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/maven/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/python/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/ruby/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/rust/preview/requirements.yaml
+draft/packs/github.com/jenkins-x/draft-packs/packs/scala/preview/requirements.yaml
+
+
+
+---------------------------------
+
+[giri@centos7-demo jenkins-x-kubernetes]$ jx install
+? Select Jenkins installation type: Static Jenkins Server and Jenkinsfiles
+Context "my-cluster" modified.
+? Cloud Provider pks
+Git configured for user: giripks and email DhanasekharReddy_Podigiri@syntelinc.com
+helm installed and configured
+existing ingress controller found, no need to install a new one
+Waiting for external loadbalancer to be created and update the nginx-ingress-controller service in kube-system namespace
+External loadbalancer created
+
+Waiting to find the external host name of the ingress controller Service in namespace kube-system with name jxing-nginx-ingress-controller
+You can now configure a wildcard DNS pointing to the new Load Balancer address 35.229.61.119
+If you don't have a wildcard DNS setup then create a DNS (A) record and point it at: 35.229.61.119, then use the DNS domain in the next input...
+
+If you do not have a custom domain setup yet, Ingress rules will be set for magic DNS nip.io.
+Once you have a custom domain ready, you can update with the command jx upgrade ingress --cluster
+? Domain 35.229.61.119.nip.io
+nginx ingress controller installed and configured
+Set up a Git username and API token to be able to perform CI/CD
+Creating a local Git user for GitHub server
+? GitHub username: giripks
+To be able to create a repository on GitHub we need an API Token
+Please click this URL and generate a token
+https://github.com/settings/tokens/new?scopes=repo,read:user,read:org,user:email,write:repo_hook,delete_repo
+
+Then COPY the token and enter it below:
+
+? API Token: ****************************************
+Select the CI/CD pipelines Git server and user
+? Do you wish to use GitHub as the pipelines Git server: Yes
+Creating a pipelines Git user for GitHub server
+To be able to create a repository on GitHub we need an API Token
+Please click this URL and generate a token
+https://github.com/settings/tokens/new?scopes=repo,read:user,read:org,user:email,write:repo_hook,delete_repo
+
+Then COPY the token and enter it below:
+
+? API Token: ****************************************
+Setting the pipelines Git server https://github.com and user name giripks.
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /home/giri/.jx/jenkins-x-versions
+Cloning the Jenkins X cloud environments repo to /home/giri/.jx/cloud-environments
+Enumerating objects: 1440, done.
+Total 1440 (delta 0), reused 0 (delta 0), pack-reused 1440
+? Defaulting workload build pack: Kubernetes Workloads: Automated CI+CD with GitOps Promotion
+Setting the team build pack to kubernetes-workloads repo: https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes.git ref: master
+Installing jx into namespace jx
+Installing jenkins-x-platform version: 2.0.1247
+
+
+WARNING: waiting for install to be ready, if this is the first time then it will take a while to download images
+Jenkins X deployments ready in namespace jx
+Configuring the TeamSettings for ImportMode Jenkinsfile
+Configure Jenkins API Token
+Generating the API token...
+Logged in admin to Jenkins server at http://jenkins.jx.35.229.61.119.nip.io via legacy security realm
+Enable CSRF protection at: http://jenkins.jx.35.229.61.119.nip.io/configureSecurity/
+Created user admin API Token for Jenkins server jenkins.jx.35.229.61.119.nip.io at http://jenkins.jx.35.229.61.119.nip.io
+Updating Jenkins with new external URL details http://jenkins.jx.35.229.61.119.nip.io
+Creating default staging and production environments
+? Select the organization where you want to create the environment repository: giripks
+Using Git provider GitHub at https://github.com
+? Using Git user name: giripks
+? Using organisation: giripks
+Creating repository giripks/environment-maskpewter-staging
+Creating Git repository giripks/environment-maskpewter-staging
+error: creating the environments: failed to create staging environment in namespace jx: creating environment git repository: cloning the forked environment "https://github.com/jenkins-x/default-environment-charts.git" into "/home/giri/.jx/environments/giripks/environment-maskpewter-staging": failed to reset hard to master in directory /home/giri/.jx/environments/giripks/environment-maskpewter-staging: git output: fatal: ambiguous argument 'origin/master': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]': failed to run 'git reset --hard origin/master' command in directory '/home/giri/.jx/environments/giripks/environment-maskpewter-staging', output: 'fatal: ambiguous argument 'origin/master': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]''
+
+
